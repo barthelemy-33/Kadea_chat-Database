@@ -1,0 +1,1 @@
+CREATE DATABASE kadea_chat_database;
