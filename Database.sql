@@ -1,4 +1,4 @@
-CREATE DATABASE kadea_chat_database;
+CREATE DATABASE kadea_chat;
 
 CREATE TABLE utilisateur (
     id_utilisateur SERIAL PRIMARY KEY,
@@ -12,4 +12,11 @@ CREATE TABLE utilisateur (
     bio VARCHAR(255),
     date_creation TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     date_modification TIMESTAMP
+);
+
+CREATE TABLE conversation (
+    id_conversation SERIAL PRIMARY KEY,
+    type VARCHAR(20) NOT NULL CHECK(type IN('privee','groupe')),
+    nom_groupe VARCHAR(150),
+    date_creation TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
