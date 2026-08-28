@@ -39,3 +39,11 @@ CREATE TABLE utilisateur_conversation (
     date_ajout TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_utilisateur,id_conversation)
 );
+
+CREATE TABLE message_statut (
+    id_message INTEGER REFERENCES message(id_message),
+    id_utilisateur INTEGER REFERENCES utilisateur(id_utilisateur),
+    statut VARCHAR(20) NOT NULL CHECK(statut IN('envoye','delivre','lu')),
+    date_statut TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id_message,id_utilisateur)
+);
