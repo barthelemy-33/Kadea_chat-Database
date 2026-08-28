@@ -29,3 +29,13 @@ CREATE TABLE message (
     date_envoi TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     date_modification TIMESTAMP
 );
+
+CREATE TABLE utilisateur_conversation (
+    id_utilisateur INTEGER REFERENCES utilisateur(id_utilisateur),
+    id_conversation INTEGER REFERENCES conversation(id_conversation),
+    statut_participation VARCHAR(20) NOT NULL DEFAULT 'actif' 
+    CHECK(statut_participation IN('actif','quitte')),
+    role VARCHAR(20) NOT NULL DEFAULT 'membre' CHECK(role IN ('membre','admin')),
+    date_ajout TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id_utilisateur,id_conversation)
+);
