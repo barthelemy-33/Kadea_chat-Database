@@ -54,3 +54,24 @@ VALUES ('Nsiala', 'barthe', 'barthensiala@gmail.com', '123rt'),
 ('Amanakou', 'josue', 'josueamanakou@gmail.com', '123456'),
 ('Mindele', 'christ', 'christmindele@gmail.com', '123rum'),
 ('Luvuezo', 'jason', 'jasonluvuezo@gmail.com', '123hu6');
+
+INSERT INTO conversation(type, nom_groupe) 
+VALUES ('privee',NULL),
+('privee',NULL),
+('groupe','Team FOOT');
+
+INSERT INTO message(id_conversation, id_utilisateur, contenu)
+VALUES (1,1, 'Salut Gédéon, t''as vu l''exercice de SQL pour demain ?'),
+(1,2,'Oui je suis dessus, j''ai un souci avec les jointures'),
+(1,1, 'Ok je regarde ça avec toi ce soir');
+
+INSERT INTO message(id_conversation, id_utilisateur, contenu)
+VALUES (2,5, 'Josué tu es dispo pour le match samedi ?'),
+(2,3,'Oui carrément, à quelle heure ?');
+
+INSERT INTO message(id_conversation, id_utilisateur, contenu)
+VALUES (3,5, 'Les gars, entraînement confirmé samedi 15h'),
+(3,4,'Reçu, j''y serai'),
+(3,3,'Je ramène les maillots'),
+(3,1,'Parfait, à samedi !');
+
