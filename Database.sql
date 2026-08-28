@@ -47,3 +47,10 @@ CREATE TABLE message_statut (
     date_statut TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_message,id_utilisateur)
 );
+
+INSERT INTO utilisateur(nom, prenom, email, mot_de_passe) 
+VALUES ('Nsiala', 'barthe', 'barthensiala@gmail.com', '123rt'),
+('Lokwa', 'gedeon', 'gedeonlokwa@gmail.com', '12345'),
+('Amanakou', 'josue', 'josueamanakou@gmail.com', '123456'),
+('Mindele', 'christ', 'christmindele@gmail.com', '123rum'),
+('Luvuezo', 'jason', 'jasonluvuezo@gmail.com', '123hu6');
