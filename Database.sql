@@ -20,3 +20,12 @@ CREATE TABLE conversation (
     nom_groupe VARCHAR(150),
     date_creation TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE message (
+    id_message SERIAL PRIMARY KEY,
+    id_conversation INTEGER REFERENCES conversation(id_conversation) NOT NULL,
+    id_utilisateur INTEGER REFERENCES utilisateur(id_utilisateur) NOT NULL,
+    contenu TEXT NOT NULL,
+    date_envoi TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    date_modification TIMESTAMP
+);
