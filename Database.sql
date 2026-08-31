@@ -60,6 +60,17 @@ VALUES ('privee',NULL),
 ('privee',NULL),
 ('groupe','Team FOOT');
 
+INSERT INTO utilisateur_conversation(id_utilisateur, id_conversation, statut_participation, role)
+VALUES (1,1,'actif','membre'),
+(2,1,'actif','membre'),
+(1,1,'actif','membre'),
+(5,2,'actif','membre'),
+(3,2,'actif','admin'),
+(5,3,'actif','membre'),
+(4,3,'actif','membre'),
+(3,3,'actif','membre'),
+(1,3,'actif','membre');
+
 INSERT INTO message(id_conversation, id_utilisateur, contenu)
 VALUES (1,1, 'Salut Gédéon, t''as vu l''exercice de SQL pour demain ?'),
 (1,2,'Oui je suis dessus, j''ai un souci avec les jointures'),
