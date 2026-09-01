@@ -63,7 +63,6 @@ VALUES ('privee',NULL),
 INSERT INTO utilisateur_conversation(id_utilisateur, id_conversation, statut_participation, role)
 VALUES (1,1,'actif','membre'),
 (2,1,'actif','membre'),
-(1,1,'actif','membre'),
 (5,2,'actif','membre'),
 (3,2,'actif','admin'),
 (5,3,'actif','membre'),
@@ -85,4 +84,23 @@ VALUES (3,5, 'Les gars, entraînement confirmé samedi 15h'),
 (3,4,'Reçu, j''y serai'),
 (3,3,'Je ramène les maillots'),
 (3,1,'Parfait, à samedi !');
+
+INSERT INTO message_statut(id_message, id_utilisateur, statut)
+VALUES (1,2,'lu'),
+(2,1,'delivre'),
+(3,2,'envoye'),
+(4,3,'delivre'),
+(5,5,'envoye'),
+(6,1,'lu'),
+(6,3,'lu'),
+(6,4,'delivre'),
+(7,1,'lu'),
+(7,3,'delivre'),
+(7,5,'lu'),
+(8,1,'delivre'),
+(8,4,'envoye'),
+(8,5,'lu'),
+(9,3,'lu'),
+(9,4,'lu'),
+(9,5,'lu');
 
