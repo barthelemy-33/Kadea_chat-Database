@@ -118,3 +118,8 @@ SELECT utilisateur.nom, message.contenu, message.date_envoi
 FROM message
 JOIN utilisateur ON message.id_utilisateur = utilisateur.id_utilisateur
 WHERE message.id_conversation = 3;
+
+SELECT id_conversation, COUNT(*) AS nombre_messages
+FROM message
+GROUP BY id_utilisateur;
+
