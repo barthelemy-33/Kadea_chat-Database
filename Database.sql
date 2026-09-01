@@ -106,4 +106,6 @@ VALUES (1,2,'lu'),
 
 SELECT * FROM utilisateur;
 
+SELECT * FROM utilisateur
+WHERE email = 'gedeonlokwa@gmail.com';
 
