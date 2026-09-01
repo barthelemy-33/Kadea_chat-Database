@@ -123,3 +123,7 @@ SELECT id_conversation, COUNT(*) AS nombre_messages
 FROM message
 GROUP BY id_utilisateur;
 
+SELECT conversation.type, conversation.nom_groupe 
+FROM utilisateur_conversation 
+JOIN conversation ON utilisateur_conversation.id_conversation = conversation.id_conversation
+WHERE utilisateur_conversation.id_conversation  = 1;
