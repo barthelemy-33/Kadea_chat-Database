@@ -104,3 +104,6 @@ VALUES (1,2,'lu'),
 (9,4,'lu'),
 (9,5,'lu');
 
+SELECT * FROM utilisateur;
+
+
