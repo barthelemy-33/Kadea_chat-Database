@@ -127,3 +127,9 @@ SELECT conversation.type, conversation.nom_groupe
 FROM utilisateur_conversation 
 JOIN conversation ON utilisateur_conversation.id_conversation = conversation.id_conversation
 WHERE utilisateur_conversation.id_conversation  = 1;
+
+SELECT contenu, date_envoi 
+FROM message
+WHERE message.id_conversation = 3
+ORDER BY date_envoi DESC
+LIMIT 1;
