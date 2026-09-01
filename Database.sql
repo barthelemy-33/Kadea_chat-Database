@@ -121,12 +121,12 @@ WHERE message.id_conversation = 3;
 
 SELECT id_conversation, COUNT(*) AS nombre_messages
 FROM message
-GROUP BY id_utilisateur;
+GROUP BY id_conversation;
 
 SELECT conversation.type, conversation.nom_groupe 
 FROM utilisateur_conversation 
 JOIN conversation ON utilisateur_conversation.id_conversation = conversation.id_conversation
-WHERE utilisateur_conversation.id_conversation  = 1;
+WHERE utilisateur_conversation.id_utilisateur  = 1;
 
 SELECT contenu, date_envoi 
 FROM message
@@ -139,4 +139,7 @@ FROM message
 WHERE message.id_conversation = 3
 ORDER BY date_envoi;
 
-
+SELECT utilisateur.nom, message.contenu, message.date_envoi
+FROM message
+JOIN utilisateur ON message.id_utilisateur = utilisateur.id_utilisateur
+WHERE utilisateur.id_utilisateur = 5;
