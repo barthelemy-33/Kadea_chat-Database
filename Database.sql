@@ -133,3 +133,10 @@ FROM message
 WHERE message.id_conversation = 3
 ORDER BY date_envoi DESC
 LIMIT 1;
+
+SELECT contenu, date_envoi 
+FROM message
+WHERE message.id_conversation = 3
+ORDER BY date_envoi;
+
+
