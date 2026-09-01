@@ -113,3 +113,8 @@ SELECT utilisateur.nom, utilisateur.prenom
 FROM utilisateur_conversation
 JOIN utilisateur ON utilisateur_conversation.id_utilisateur = utilisateur.id_utilisateur
 WHERE utilisateur_conversation.id_conversation = 3;
+
+SELECT utilisateur.nom, message.contenu, message.date_envoi
+FROM message
+JOIN utilisateur ON message.id_utilisateur = utilisateur.id_utilisateur
+WHERE message.id_conversation = 3;
