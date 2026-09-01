@@ -109,3 +109,7 @@ SELECT * FROM utilisateur;
 SELECT * FROM utilisateur
 WHERE email = 'gedeonlokwa@gmail.com';
 
+SELECT utilisateur.nom, utilisateur.prenom 
+FROM utilisateur_conversation
+JOIN utilisateur ON utilisateur_conversation.id_utilisateur = utilisateur.id_utilisateur
+WHERE utilisateur_conversation.id_conversation = 3;
